@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101114;
+    color: white;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 240px;
+    background: #191a20;
+    padding: 25px 15px;
+    min-height: 100vh;
+}
+
+.logo {
+    margin-bottom: 35px;
+    padding-left: 12px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #b8b8c2;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #30313a;
+    color: white;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #a5a5b0;
+}
+
+/* CREATE POST FORM */
+
+.create-post {
+    background: #1b1c22;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.create-post h2 {
+    margin-bottom: 20px;
+}
+
+#postForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#postForm label {
+    color: #d5d5dc;
+    margin-top: 5px;
+}
+
+#postForm input,
+#postForm textarea,
+#postForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #393a43;
+    border-radius: 7px;
+    background: #111217;
+    color: white;
+    font-size: 14px;
+}
+
+#postForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#postForm input:focus,
+#postForm textarea:focus,
+#postForm select:focus {
+    outline: 1px solid #8b5cf6;
+}
+
+.share-btn {
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #8056e8;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.share-btn:hover {
+    background: #7044d5;
+}
+
+#formMessage {
+    color: #a78bfa;
+    font-size: 14px;
+}
+
+/* COMMUNITY POSTS */
+
+.community-section {
+    width: 100%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#postCount {
+    color: #aaa;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.post-card {
+    background: #1b1c22;
+    border: 1px solid #30313a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.post-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-details {
+    padding: 17px;
+}
+
+.post-category {
+    display: inline-block;
+    color: #c4b5fd;
+    background: #33265a;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.post-details h3 {
+    margin-bottom: 9px;
+}
+
+.post-description {
+    color: #b8b8c2;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.post-date {
+    color: #858590;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-actions button,
+.comment-form button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #343541;
+    color: white;
+}
+
+.post-actions button:hover,
+.comment-form button:hover {
+    background: #51446f;
+}
+
+.delete-btn {
+    background: #642d36 !important;
+}
+
+.comments-area {
+    margin-top: 15px;
+    border-top: 1px solid #393a43;
+    padding-top: 13px;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 12px;
+}
+
+.comment-item {
+    color: #c6c6cf;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.comment-form {
+    display: flex;
+    gap: 7px;
+}
+
+.comment-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 9px;
+    border: 1px solid #393a43;
+    border-radius: 6px;
+    background: #111217;
+    color: white;
+}
+
+#emptyMessage {
+    color: #999;
+    text-align: center;
+    padding: 35px 10px;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 750px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}

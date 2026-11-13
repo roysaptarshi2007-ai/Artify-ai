@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Generation - Virtual Arts Assistant</title>
+
+    <link rel="stylesheet" href="generation.css">
+</head>
+
+<body>
+
+    <div class="generation-page">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Virtual Arts</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="generation.html" class="active">Image Generation</a>
+                <a href="#">AI Image Editor</a>
+                <a href="#">My Projects</a>
+                <a href="#">Templates</a>
+                <a href="#">Community</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main content -->
+        <main class="generation-main">
+
+            <header class="page-header">
+                <h1>AI Image Generation</h1>
+                <p>Turn your imagination into artwork.</p>
+            </header>
+
+
+            <!-- Prompt section -->
+            <section class="prompt-section">
+
+                <h2>Describe your imagination</h2>
+
+                <textarea
+                    id="promptInput"
+                    placeholder="Example: A beautiful futuristic city at sunset..."
+                ></textarea>
+
+                <p id="charCount">0 characters</p>
+
+
+                <!-- Generation settings -->
+                <div class="settings-container">
+
+                    <div class="setting">
+                        <label for="artStyle">Art Style</label>
+
+                        <select id="artStyle">
+                            <option value="Realistic">Realistic</option>
+                            <option value="Anime">Anime</option>
+                            <option value="3D Art">3D Art</option>
+                            <option value="Watercolor">Watercolor</option>
+                            <option value="Digital Art">Digital Art</option>
+                        </select>
+                    </div>
+
+
+                    <div class="setting">
+                        <label for="aspectRatio">Aspect Ratio</label>
+
+                        <select id="aspectRatio">
+                            <option value="1:1">Square (1:1)</option>
+                            <option value="16:9">Landscape (16:9)</option>
+                            <option value="9:16">Portrait (9:16)</option>
+                        </select>
+                    </div>
+
+
+                    <div class="setting">
+                        <label for="imageCount">Number of Images</label>
+
+                        <select id="imageCount">
+                            <option value="1">1 Image</option>
+                            <option value="2">2 Images</option>
+                            <option value="4">4 Images</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <button id="generateBtn">
+                    Generate Artwork
+                </button>
+
+            </section>
+
+
+            <!-- Loading -->
+            <div id="loading" class="loading hidden">
+                Creating your artwork...
+            </div>
+
+
+            <!-- Results -->
+            <section class="results-section">
+
+                <h2>Generated Artwork</h2>
+
+                <div id="imageContainer" class="image-container">
+
+                    <p class="empty-message">
+                        Your generated artwork will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="generation.js" defer></script>
+
+</body>
+</html>

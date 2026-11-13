@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Favorites | ArtSpace</title>
+
+    <link rel="stylesheet" href="favorites.css">
+    <script src="favorites.js" defer></script>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2 class="logo">ArtSpace</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="generation.html">Image Generation</a>
+                <a href="editor.html">AI Image Editor</a>
+                <a href="projects.html">My Projects</a>
+                <a href="favorites.html" class="active">Favorites</a>
+                <a href="community.html">Community</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="page-header">
+                <h1>My Favorites</h1>
+                <p>Your saved creative prompts in one place.</p>
+            </header>
+
+
+            <!-- FAVORITE COUNTER -->
+            <section class="favorite-summary">
+                <h2>Saved Prompts</h2>
+                <p id="favoriteCount">0 prompts saved</p>
+            </section>
+
+
+            <!-- FILTER BUTTONS -->
+            <section class="filter-section">
+
+                <button class="filter-btn active" data-category="All">
+                    All
+                </button>
+
+                <button class="filter-btn" data-category="Portrait">
+                    Portrait
+                </button>
+
+                <button class="filter-btn" data-category="Nature">
+                    Nature
+                </button>
+
+                <button class="filter-btn" data-category="Fantasy">
+                    Fantasy
+                </button>
+
+                <button class="filter-btn" data-category="Architecture">
+                    Architecture
+                </button>
+
+            </section>
+
+
+            <!-- FAVORITE PROMPTS -->
+            <section class="favorites-section">
+
+                <div id="favoritesContainer"></div>
+
+                <div id="emptyMessage">
+                    <h2>No favorites yet!</h2>
+                    <p>Visit Prompt Store and save your favorite prompts.</p>
+                    <a href="templates.html">Explore Prompt Store</a>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

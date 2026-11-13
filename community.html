@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | ArtSpace</title>
+    <link rel="stylesheet" href="community.css">
+    <script src="community.js" defer></script>
+</head>
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">ArtSpace</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="generation.html">Image Generation</a>
+                <a href="editor.html">AI Image Editor</a>
+                <a href="projects.html">My Projects</a>
+                <a href="templates.html">Prompt Store</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="community.html" class="active">Community</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <h1>Creative Community</h1>
+                    <p>Share your artwork and explore creations from others.</p>
+                </div>
+            </header>
+
+            <!-- CREATE POST -->
+            <section class="create-post">
+                <h2>Share Your Artwork</h2>
+
+                <form id="postForm">
+
+                    <label for="postTitle">Artwork Title</label>
+                    <input
+                        type="text"
+                        id="postTitle"
+                        placeholder="Give your artwork a title"
+                        required
+                    >
+
+                    <label for="postDescription">Description</label>
+                    <textarea
+                        id="postDescription"
+                        placeholder="Tell us about your artwork..."
+                        required
+                    ></textarea>
+
+                    <label for="postCategory">Category</label>
+                    <select id="postCategory">
+                        <option value="Digital Art">Digital Art</option>
+                        <option value="Portrait">Portrait</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="postImage">Upload Artwork</label>
+                    <input
+                        type="file"
+                        id="postImage"
+                        accept="image/*"
+                        required
+                    >
+
+                    <p id="imageName"></p>
+
+                    <button type="submit" class="share-btn">
+                        Share Artwork
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+            </section>
+
+            <!-- COMMUNITY POSTS -->
+            <section class="community-section">
+                <div class="section-heading">
+                    <h2>Explore Artwork</h2>
+                    <span id="postCount">0 posts</span>
+                </div>
+
+                <div id="postsContainer" class="posts-container"></div>
+
+                <p id="emptyMessage">
+                    No artwork has been shared yet. Be the first to post!
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

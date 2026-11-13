@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+    <div class="projects-page">
+
+        <aside class="sidebar">
+            <h2>Virtual Arts</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="generation.html">Image Generation</a>
+                <a href="editor.html">AI Image Editor</a>
+                <a href="projects.html" class="active">My Projects</a>
+            </nav>
+        </aside>
+
+        <main class="projects-main">
+
+            <header>
+                <h1>My Projects</h1>
+                <p>Your saved artwork in one place.</p>
+            </header>
+
+            <div class="project-info">
+                <h2>Saved Artwork</h2>
+                <p id="projectCount">0 projects</p>
+            </div>
+
+            <div id="projectContainer" class="project-container">
+                <!-- JavaScript will add project cards here -->
+            </div>
+
+            <p id="emptyMessage">
+                No projects saved yet. Upload an image in the AI Image Editor
+                and click Save Project.
+            </p>
+
+        </main>
+
+    </div>
+
+    <script src="projects.js" defer></script>
+
+</body>
+</html>

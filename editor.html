@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Editor</title>
+    <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+
+    <div class="editor-page">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Virtual Arts</h2>
+
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="generation.html">Image Generation</a>
+                <a href="editor.html" class="active">AI Image Editor</a>
+            </nav>
+        </aside>
+
+        <!-- Main editor -->
+        <main class="editor-main">
+
+            <header>
+                <h1>AI Image Editor</h1>
+                <p>Upload your artwork and customize it.</p>
+            </header>
+
+            <div class="workspace">
+
+                <!-- Image preview section -->
+                <section class="image-section">
+
+                    <h2>Your Artwork</h2>
+
+                    <div class="image-preview" id="imagePreview">
+
+                        <p id="uploadMessage">
+                            Upload an image to start editing
+                        </p>
+
+                        <img id="previewImage" alt="Uploaded artwork">
+
+                    </div>
+
+                    <input
+                        type="file"
+                        id="imageUpload"
+                        accept="image/*"
+                    >
+
+                </section>
+
+                <!-- Editing panel -->
+                <section class="editing-panel">
+
+                    <h2>Editing Panel</h2>
+
+                    <label for="editPrompt">
+                        What would you like to change?
+                    </label>
+
+                    <textarea
+                        id="editPrompt"
+                        placeholder="Example: Change the dress to red..."
+                    ></textarea>
+
+                    <label for="editArea">Select editing area</label>
+
+                    <select id="editArea">
+                        <option value="Entire Image">Entire Image</option>
+                        <option value="Background">Background</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Hair">Hair</option>
+                        <option value="Face">Face</option>
+                    </select>
+
+                    <label for="editType">Editing type</label>
+
+                    <select id="editType">
+                        <option value="Color Change">Color Change</option>
+                        <option value="Background Change">Background Change</option>
+                        <option value="Object Change">Object Change</option>
+                        <option value="Enhancement">Enhancement</option>
+                    </select>
+
+                    <button id="applyEdit">Apply Edit</button>
+
+                    <p id="statusMessage"></p>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="editor.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.projects-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    background: #1b1b1b;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #333;
+    color: white;
+}
+
+/* Main content */
+
+.projects-main {
+    flex: 1;
+    padding: 35px;
+}
+
+.projects-main header p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0 20px;
+}
+
+#projectCount {
+    color: #aaa;
+}
+
+/* Project gallery */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    background: #1b1b1b;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.project-card p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.delete-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    background: #a83232;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #cc3838;
+}
+
+#emptyMessage {
+    color: #aaa;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .projects-page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .projects-main {
+        padding: 20px;
+    }
+}

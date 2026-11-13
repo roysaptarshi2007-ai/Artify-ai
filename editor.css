@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.editor-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    background: #1b1b1b;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #333;
+    color: white;
+}
+
+/* Main area */
+
+.editor-main {
+    flex: 1;
+    padding: 35px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* Image section */
+
+.image-section,
+.editing-panel {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.image-preview {
+    width: 100%;
+    height: 400px;
+    background: #252525;
+    border: 2px dashed #555;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-preview p {
+    color: #aaa;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+#imageUpload {
+    width: 100%;
+    color: #ccc;
+}
+
+/* Editing panel */
+
+.editing-panel label {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.editing-panel textarea,
+.editing-panel select {
+    width: 100%;
+    padding: 13px;
+    background: #292929;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 7px;
+}
+
+.editing-panel textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.editing-panel button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    background: #7557e8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.editing-panel button:hover {
+    background: #6243d0;
+}
+
+#statusMessage {
+    margin-top: 15px;
+    color: #a99aff;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .editor-page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .editor-main {
+        padding: 20px;
+    }
+}
